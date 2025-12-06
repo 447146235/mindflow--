@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>MindFlow</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'mind-bg': '#0f172a',
+              'mind-surface': '#1e293b',
+              'mind-accent': '#38bdf8',
+              'mind-glow': '#818cf8',
+            },
+            animation: {
+              'breathe': 'breathe 8s infinite ease-in-out',
+              'fade-in': 'fadeIn 0.5s ease-out',
+              'float': 'float 3s ease-in-out infinite',
+              'shred': 'shred 0.8s ease-in-out forwards',
+            },
+            keyframes: {
+              breathe: {
+                '0%, 100%': { transform: 'scale(1)', opacity: '0.5' },
+                '50%': { transform: 'scale(1.5)', opacity: '1' },
+              },
+              fadeIn: {
+                '0%': { opacity: '0' },
+                '100%': { opacity: '1' },
+              },
+              float: {
+                '0%, 100%': { transform: 'translateY(0)' },
+                '50%': { transform: 'translateY(-10px)' },
+              },
+              shred: {
+                '0%': { transform: 'scale(1) rotate(0deg)', opacity: '1' },
+                '20%': { transform: 'scale(0.9) rotate(-5deg) skewX(10deg)' },
+                '40%': { transform: 'scale(0.9) rotate(5deg) skewX(-10deg)' },
+                '60%': { transform: 'scale(0.5) rotate(-10deg)', opacity: '0.8', filter: 'blur(2px)' },
+                '100%': { transform: 'scale(0) rotate(180deg)', opacity: '0', filter: 'blur(10px)' },
+              }
+            }
+          },
+        },
+      }
+    </script>
+    <style>
+      body {
+        overscroll-behavior: none;
+        background-color: #0f172a;
+        color: white;
+        -webkit-tap-highlight-color: transparent;
+      }
+      /* Hide scrollbar for clean UI */
+      ::-webkit-scrollbar {
+        width: 0px;
+        background: transparent;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.1/",
+    "react": "https://aistudiocdn.com/react@^19.2.1",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.556.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.1/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.31.0"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>

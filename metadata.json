@@ -1,0 +1,7 @@
+{
+  "name": "MindFlow - 互动解压",
+  "description": "包含5种互动感官体验的解压应用，专为缓解当代焦虑而设计。包括气泡戳戳乐、呼吸冥想、流体物理、禅意沙画以及AI情感垃圾桶。",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
